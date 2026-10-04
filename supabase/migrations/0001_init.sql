@@ -62,7 +62,7 @@ alter table public.payouts enable row level security;
 create policy "anyone can read config" on public.config for select using (true);
 create policy "anyone can read visible setups" on public.setups for select using (not hidden);
 create policy "anyone can read payouts" on public.payouts for select using (true);
--- ratings has no policies: individual votes are never readable from the browser.
+-- ratings: see 0002, which exposes scores but never who gave them.
 
 -- Current-round leaderboard. Weighted so one 10 can't beat many 9s: (6*3 + sum) / (3 + n).
 create view public.standings as

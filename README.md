@@ -32,7 +32,7 @@ Wallets are free to make, so wallet sign-in alone doesn't stop one person voting
 ## Setup
 
 1. **Supabase**: create a project at supabase.com.
-   - SQL editor: run `supabase/migrations/0001_init.sql`.
+   - SQL editor: run the files in `supabase/migrations/` in order.
    - Authentication → Sign In / Providers: enable **Web3 Wallet → Solana**.
    - Authentication → URL Configuration: set the Site URL to your domain (and add `http://localhost:3000` for local dev).
    - Optional but recommended: turn on CAPTCHA and the auth rate limits.
